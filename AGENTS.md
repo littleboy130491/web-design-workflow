@@ -2,134 +2,33 @@
 
 ## Purpose
 
-This repository is used to design workflows collaboratively in chat, then materialize accepted workflows as structured files under `workflows/` and supporting artifacts under `resources/`.
+This repository is used for two different operating modes:
 
-## Default Operating Procedure
+1. Designing or revising workflows.
+2. Executing an existing workflow step by step.
 
-Follow this sequence for every workflow-building request:
+Use this file as the index and routing guide. Then follow the correct detailed instruction file for the task at hand.
 
-1. Ask the user what workflow they want to create.
-2. Propose a good workflow in chat.
-3. If the user does not accept it, iterate in chat until they approve it.
-4. After approval, create the workflow files and folders in the repository.
+## Instruction Routing
 
-Do not skip the approval step before writing workflow artifacts unless the user explicitly asks you to do so.
+- If the user wants to create a new workflow, revise a workflow, or discuss workflow structure before files are written, follow `docs/workflow-authoring.md`.
+- If the user wants to perform work using an existing workflow, follow `docs/workflow-execution.md`.
 
-## Chat Output Format For Proposed Workflows
+## Default Behavior
 
-When proposing a workflow in chat, present each suggested workflow step with:
+- Do not mix authoring and execution rules unless the user is explicitly doing both.
+- When the task is ambiguous, determine whether the user is asking to design the workflow or to execute it.
+- Prefer reading only the instruction file relevant to the current mode.
+- Treat the detailed mode-specific instruction file as the source of truth once the mode is identified.
 
-- Brief description
-- Expected input
-- Expected output
-- Success criteria
-- Constraints
+## Repository Layout
 
-Keep the proposal practical and implementation-oriented. Prefer clear, numbered workflow steps.
-
-## Iteration Rules
-
-- If the user rejects or adjusts the workflow, revise the proposal in chat.
-- Continue iterating until the user explicitly accepts the workflow.
-- Once accepted, use the approved version as the source of truth for file creation.
-
-## Repository Output Rules
-
-After approval, create one folder per workflow step inside `workflows/`.
-
-Folder naming rules:
-
-- Use a two-digit numeric prefix.
-- Use a short kebab-case name.
-- Format: `NN-workflow-name`
-- Example: `01-brief`
-
-Inside each workflow step folder, create exactly these files:
-
-- `inputs.md`
-- `outputs.md`
-- `instructions.md`
-
-Example:
-
-```text
-workflows/
-  01-brief/
-    inputs.md
-    outputs.md
-    instructions.md
-```
-
-## File Content Rules
-
-### `inputs.md`
-
-Describe the expected input for the current workflow step.
-
-If the input comes from a previous workflow step, state that explicitly using the prior step's output path.
-
-Example:
-
-```md
-Input from `01-brief/outputs.md`.
-```
-
-### `instructions.md`
-
-Store the workflow-step information that was defined in chat in step 2, including:
-
-- Brief description
-- Success criteria
-- Constraints
-- Any execution notes needed to perform the step well
-
-### `outputs.md`
-
-Describe the expected output of the workflow step.
-
-If the step produces files or assets beyond Markdown documentation, also create a matching folder in `resources/` and reference it from `outputs.md`.
-
-Example:
-
-```text
-resources/
-  02-planning/
-```
-
-Example `outputs.md` note:
-
-```md
-Output files can also be found in `resources/02-planning`.
-```
-
-## Resources Folder Rules
-
-When a workflow step needs outputs that are more than just Markdown files:
-
-1. Create a folder inside `resources/` using the same numeric prefix and workflow name.
-2. Place the generated output files in that folder.
-3. Mention that folder in the corresponding `workflows/NN-name/outputs.md`.
-
-Example:
-
-- Workflow step: `02-planning`
-- Resource folder: `resources/02-planning`
-
-## Quality Bar
-
-The ideal workflow should be:
-
-- Clear enough for another agent or human to execute
-- Sequential and dependency-aware
-- Minimal but complete
-- Specific about inputs and outputs
-- Explicit about what success looks like
-- Honest about constraints and assumptions
+- Workflow definitions live under `workflows/`.
+- Supporting artifacts live under `resources/`.
+- Mode-specific operating instructions live under `docs/`.
 
 ## Guardrails
 
-- Do not create vague workflow steps.
-- Do not create workflow folders before the user accepts the workflow, unless explicitly instructed.
-- Do not omit dependencies between steps when one step consumes another step's output.
+- Do not create workflow artifacts before the user approves the workflow design, unless they explicitly ask you to do so.
+- Do not ask the user to manually resolve dependencies that are already defined in workflow files.
 - Do not place non-Markdown generated artifacts inside `workflows/`; place them in `resources/`.
-- Keep names concise and filesystem-safe.
