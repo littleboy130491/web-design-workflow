@@ -16,25 +16,26 @@ Follow this sequence for every workflow-execution request:
 4. Determine whether every required input already exists.
 5. If an input is missing, resolve it before executing the current step:
    - If the input is provided by a previous workflow step, move backward to that previous step.
-   - Read the previous step's `instructions.md`, `inputs.md`, and `outputs.md`.
+   - Read the previous step's `instructions.md` and `inputs.md`, then inspect the matching folder in `outputs/`.
    - Repeat this backward traversal until you reach the earliest missing dependency.
    - Execute dependencies in forward order once the required inputs are available.
 6. If a missing input does not come from a previous workflow step, tell the user exactly what input is needed and ask them to provide it.
 7. Once all inputs exist, tell the user which step is ready, what will be done next, and ask for confirmation before executing it.
 8. After the user confirms, execute the current workflow step using `instructions.md` as the source of truth.
-9. Produce the step outputs and store any non-Markdown artifacts in the matching `resources/` folder when applicable.
+9. Produce the step outputs and store any non-Markdown artifacts in the matching `outputs/` folder when applicable.
 10. After completing the step, summarize the result and ask whether to continue to the next step.
 
 Do not ask the user to manually figure out workflow dependencies if the workflow files already define them. The agent should trace dependencies on its own.
 Do not assume permission to run the rest of the workflow after completing one step. Default to explicit confirmation between steps unless the user clearly asks for end-to-end execution.
+When executing a workflow, only create or modify files inside `outputs/` unless the user explicitly asks for changes elsewhere.
 
 ## Missing Input Resolution Rules
 
 When checking whether a workflow step can be executed:
 
 - Read `inputs.md` first to identify every required input.
-- If `inputs.md` references a previous step's `workflows/NN-name/outputs.md`, treat that as a dependency that must be satisfied before continuing.
-- Read the referenced prior step's `outputs.md` to understand what should exist.
+- If `inputs.md` references a previous step's `outputs/NN-name/` folder or a file within it, treat that as a dependency that must be satisfied before continuing.
+- Read the referenced prior step's `instructions.md` and inspect the matching `outputs/NN-name/` folder to understand what should exist.
 - If the prior step output does not exist yet, execute that prior step first.
 - Keep moving backward until you find a step whose inputs are available or until you reach an input that only the user can provide.
 - When asking the user for a missing external input, be specific about the format or content needed.
@@ -48,11 +49,13 @@ When executing a workflow step:
 - Read `instructions.md` before taking action.
 - Use `instructions.md` to understand the step's brief description, expected input, expected output, success criteria, constraints, and execution notes.
 - Before executing the step, tell the user what step you are about to run and wait for confirmation.
-- Write the actual Markdown deliverable for the step into `outputs.md`.
-- Use `outputs.md` to verify that the produced result matches the expectations documented in `instructions.md`.
+- Create or update the matching `outputs/NN-name/` folder for the step.
+- Write the actual deliverables for the step into that output folder, including Markdown outputs when applicable.
+- Use the contents of `outputs/NN-name/` to verify that the produced result matches the expectations documented in `instructions.md`.
 - If the step depends on outputs from another step, reference those upstream outputs explicitly while working.
 - Do not mark a step complete if its documented outputs are incomplete or inconsistent with its success criteria.
 - After the step is complete, ask the user whether to proceed to the next step instead of automatically continuing.
+- Do not modify workflow definition files during execution unless the user explicitly asks for a workflow revision.
 
 ## Strategic Output Rules
 
@@ -63,6 +66,6 @@ When producing outputs for a workflow step, think strategically:
 - Prefer structured, reusable outputs over vague summaries.
 - Keep outputs aligned with the workflow's actual dependency chain.
 - If a stronger output format will materially improve later execution, produce it as long as it remains consistent with the approved workflow.
-- Put Markdown outputs in `workflows/NN-name/outputs.md`, not in `resources/`.
-- Use `resources/NN-name/` only for non-Markdown supporting artifacts.
+- Put all produced outputs in `outputs/NN-name/`, including Markdown outputs.
+- Treat `workflows/` as read-only during execution unless the user explicitly asks to revise the workflow.
 - Do not invent missing user inputs; ask for them when they cannot be derived from prior steps or existing artifacts.

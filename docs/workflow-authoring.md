@@ -47,7 +47,6 @@ Folder naming rules:
 Inside each workflow step folder, create exactly these files:
 
 - `inputs.md`
-- `outputs.md`
 - `instructions.md`
 
 Example:
@@ -56,7 +55,6 @@ Example:
 workflows/
   01-brief/
     inputs.md
-    outputs.md
     instructions.md
 ```
 
@@ -66,12 +64,12 @@ workflows/
 
 Describe the expected input for the current workflow step.
 
-If the input comes from a previous workflow step, state that explicitly using the prior step's output path.
+If the input comes from a previous workflow step, state that explicitly using the prior step's output folder or specific output file path.
 
 Example:
 
 ```md
-Input from `workflows/01-brief/outputs.md`.
+Input from `outputs/01-brief/`.
 ```
 
 ### `instructions.md`
@@ -80,49 +78,32 @@ Store the workflow-step information that was defined in chat in step 2, includin
 
 - Brief description
 - Expected input
-- Expected output
 - Success criteria
 - Constraints
 - Any execution notes needed to perform the step well
 
-`instructions.md` is the place for the step specification. Put the expected outputs here, not in `outputs.md`.
+`instructions.md` is the place for the step specification, including the expected outputs for the step and where they should be created inside `outputs/NN-name/`.
 
-### `outputs.md`
+## Outputs Folder Rules
 
-Store the actual output produced by the workflow step as Markdown content.
-
-Do not use `outputs.md` to restate what the output is supposed to be. The expectation belongs in `instructions.md`. The realized result belongs in `outputs.md`.
-
-If the step's primary deliverable can be represented in Markdown, put that deliverable directly in `workflows/NN-workflow-name/outputs.md`.
-
-If the step also produces files or assets beyond Markdown documentation, create a matching folder in `resources/` and reference it from `outputs.md`.
+Every workflow step should write its produced results into a matching folder under `outputs/`.
 
 Example:
 
 ```text
-resources/
+outputs/
   02-planning/
 ```
 
-Example `outputs.md` note:
-
-```md
-Output files can also be found in `resources/02-planning`.
-```
-
-## Resources Folder Rules
-
-When a workflow step needs outputs that are more than just Markdown files:
-
-1. Create a folder inside `resources/` using the same numeric prefix and workflow name.
+1. Create a folder inside `outputs/` using the same numeric prefix and workflow name.
 2. Place the generated output files in that folder.
-3. Put the Markdown-form output for the step in `workflows/NN-name/outputs.md`.
-4. Mention the matching `resources/NN-name/` folder in `workflows/NN-name/outputs.md`.
+3. If the output is Markdown, store it as one or more Markdown files inside that same `outputs/NN-name/` folder.
+4. In `instructions.md`, describe the expected output files clearly enough that later execution can verify them.
 
 Example:
 
 - Workflow step: `02-planning`
-- Resource folder: `resources/02-planning`
+- Output folder: `outputs/02-planning`
 
 ## Quality Bar
 
@@ -132,6 +113,7 @@ The ideal workflow should be:
 - Sequential and dependency-aware
 - Minimal but complete
 - Specific about inputs and outputs
+- Explicit about where outputs are written
 - Explicit about what success looks like
 - Honest about constraints and assumptions
 
@@ -140,7 +122,7 @@ The ideal workflow should be:
 - Do not create vague workflow steps.
 - Do not create workflow folders before the user accepts the workflow, unless explicitly instructed.
 - Do not omit dependencies between steps when one step consumes another step's output.
-- Do not write "expected outputs" into `outputs.md`; put that specification in `instructions.md`.
-- Do put the actual Markdown deliverable for a step into `workflows/NN-name/outputs.md`.
-- Do not place non-Markdown generated artifacts inside `workflows/`; place them in `resources/`.
+- Do not create `outputs.md` inside `workflows/NN-name/`.
+- Do put all produced outputs, including Markdown outputs, inside `outputs/NN-name/`.
+- Do not place generated artifacts inside `workflows/`; place them in `outputs/`.
 - Keep names concise and filesystem-safe.

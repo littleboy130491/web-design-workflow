@@ -24,7 +24,7 @@ Use this file as the index and routing guide. Then follow the correct detailed i
 ## Repository Layout
 
 - Workflow definitions live under `workflows/`.
-- Supporting artifacts live under `resources/`.
+- Supporting artifacts live under `outputs/`.
 - Mode-specific operating instructions live under `docs/`.
 
 ## Guardrails
@@ -32,4 +32,5 @@ Use this file as the index and routing guide. Then follow the correct detailed i
 - Do not create workflow artifacts before the user approves the workflow design, unless they explicitly ask you to do so.
 - Do not ask the user to manually resolve dependencies that are already defined in workflow files.
 - Do not execute an entire workflow in one shot unless the user explicitly asks for that behavior.
-- Do not place non-Markdown generated artifacts inside `workflows/`; place them in `resources/`.
+- Do not place generated outputs inside `workflows/`; place them in `outputs/`.
+- When executing a workflow, only create or modify files inside `outputs/` unless the user explicitly asks for changes elsewhere.
