@@ -71,7 +71,7 @@ If the input comes from a previous workflow step, state that explicitly using th
 Example:
 
 ```md
-Input from `01-brief/outputs.md`.
+Input from `workflows/01-brief/outputs.md`.
 ```
 
 ### `instructions.md`
@@ -79,15 +79,23 @@ Input from `01-brief/outputs.md`.
 Store the workflow-step information that was defined in chat in step 2, including:
 
 - Brief description
+- Expected input
+- Expected output
 - Success criteria
 - Constraints
 - Any execution notes needed to perform the step well
 
+`instructions.md` is the place for the step specification. Put the expected outputs here, not in `outputs.md`.
+
 ### `outputs.md`
 
-Describe the expected output of the workflow step.
+Store the actual output produced by the workflow step as Markdown content.
 
-If the step produces files or assets beyond Markdown documentation, also create a matching folder in `resources/` and reference it from `outputs.md`.
+Do not use `outputs.md` to restate what the output is supposed to be. The expectation belongs in `instructions.md`. The realized result belongs in `outputs.md`.
+
+If the step's primary deliverable can be represented in Markdown, put that deliverable directly in `workflows/NN-workflow-name/outputs.md`.
+
+If the step also produces files or assets beyond Markdown documentation, create a matching folder in `resources/` and reference it from `outputs.md`.
 
 Example:
 
@@ -108,7 +116,8 @@ When a workflow step needs outputs that are more than just Markdown files:
 
 1. Create a folder inside `resources/` using the same numeric prefix and workflow name.
 2. Place the generated output files in that folder.
-3. Mention that folder in the corresponding `workflows/NN-name/outputs.md`.
+3. Put the Markdown-form output for the step in `workflows/NN-name/outputs.md`.
+4. Mention the matching `resources/NN-name/` folder in `workflows/NN-name/outputs.md`.
 
 Example:
 
@@ -131,5 +140,7 @@ The ideal workflow should be:
 - Do not create vague workflow steps.
 - Do not create workflow folders before the user accepts the workflow, unless explicitly instructed.
 - Do not omit dependencies between steps when one step consumes another step's output.
+- Do not write "expected outputs" into `outputs.md`; put that specification in `instructions.md`.
+- Do put the actual Markdown deliverable for a step into `workflows/NN-name/outputs.md`.
 - Do not place non-Markdown generated artifacts inside `workflows/`; place them in `resources/`.
 - Keep names concise and filesystem-safe.

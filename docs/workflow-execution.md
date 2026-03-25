@@ -31,7 +31,7 @@ Do not ask the user to manually figure out workflow dependencies if the workflow
 When checking whether a workflow step can be executed:
 
 - Read `inputs.md` first to identify every required input.
-- If `inputs.md` references a previous step's `outputs.md`, treat that as a dependency that must be satisfied before continuing.
+- If `inputs.md` references a previous step's `workflows/NN-name/outputs.md`, treat that as a dependency that must be satisfied before continuing.
 - Read the referenced prior step's `outputs.md` to understand what should exist.
 - If the prior step output does not exist yet, execute that prior step first.
 - Keep moving backward until you find a step whose inputs are available or until you reach an input that only the user can provide.
@@ -43,8 +43,9 @@ When checking whether a workflow step can be executed:
 When executing a workflow step:
 
 - Read `instructions.md` before taking action.
-- Use `instructions.md` to understand the step's brief description, success criteria, constraints, and execution notes.
-- Use `outputs.md` to verify what must be produced before the step is considered complete.
+- Use `instructions.md` to understand the step's brief description, expected input, expected output, success criteria, constraints, and execution notes.
+- Write the actual Markdown deliverable for the step into `outputs.md`.
+- Use `outputs.md` to verify that the produced result matches the expectations documented in `instructions.md`.
 - If the step depends on outputs from another step, reference those upstream outputs explicitly while working.
 - Do not mark a step complete if its documented outputs are incomplete or inconsistent with its success criteria.
 
@@ -57,4 +58,6 @@ When producing outputs for a workflow step, think strategically:
 - Prefer structured, reusable outputs over vague summaries.
 - Keep outputs aligned with the workflow's actual dependency chain.
 - If a stronger output format will materially improve later execution, produce it as long as it remains consistent with the approved workflow.
+- Put Markdown outputs in `workflows/NN-name/outputs.md`, not in `resources/`.
+- Use `resources/NN-name/` only for non-Markdown supporting artifacts.
 - Do not invent missing user inputs; ask for them when they cannot be derived from prior steps or existing artifacts.
