@@ -6,14 +6,14 @@ Write production-ready site copy for each planned page using the approved conten
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/site-map.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/recommended-direction.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/messaging-framework.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/claim-validation.md`
+- `outputs/03-content-direction/site-map.md`
+- `outputs/03-content-direction/recommended-direction.md`
+- `outputs/04-messaging-framework/messaging-framework.md`
+- `outputs/04-messaging-framework/claim-validation.md`
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`:
+Create the following files inside `outputs/05-copywriting/`:
 
 - One Markdown file per page in the approved site map, for example `home.md`, `about.md`, `services.md`, and `contact.md`
 - `seo-metadata.md`: Page titles, meta descriptions, and social sharing copy
@@ -30,14 +30,14 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 ## Constraints
 
 - Avoid filler and generic agency-style language
-- Keep claims consistent with `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/claim-validation.md`
+- Keep claims consistent with `outputs/04-messaging-framework/claim-validation.md`
 - Do not change the strategic direction during copywriting without documenting the reason
 - Do not write editor-facing or workflow-facing prose into public page copy
 - Do not describe the page structure from the writer's perspective unless it is actual UI copy
 - Reject meta phrases and editor-facing scaffolding such as `Halaman ini`, `Berikut`, `Gunakan`, or `Setiap kartu` when they describe the page, output structure, or writing process instead of speaking to the company audience
 - Avoid literal translation artifacts and mixed-language phrasing unless bilingual content is explicitly part of the site plan
 - When the approved site language is Indonesian, prefer natural business vocabulary such as `ruang lingkup` and `serah terima` over awkward English loanwords
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`
+- Do not modify files outside `outputs/05-copywriting/`
 
 ## Execution Notes
 

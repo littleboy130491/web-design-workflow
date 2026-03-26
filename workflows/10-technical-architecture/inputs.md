@@ -1,15 +1,33 @@
 # Inputs
 
-- Required: `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/site-map.md`
+- Required: `outputs/03-content-direction/site-map.md`
   - Source: previous workflow step `03-content-direction`
   - Use: page inventory and content scope that the technical plan must support
 
-- Required: relevant files from `/home/henry/Desktop/projects/web-designer/outputs/08-design-system/`
+- Required: `outputs/08-design-system/design-tokens.md`
   - Source: previous workflow step `08-design-system`
-  - Use: tokens, components, interaction rules, and accessibility requirements that drive frontend architecture
-  - At minimum, use `design-tokens.md` and `component-specs.md`; use other step outputs when they affect implementation planning
+  - Use: token definitions that drive implementation structure, spacing, color, type, and state decisions
 
-- Required: relevant files from `/home/henry/Desktop/projects/web-designer/outputs/09-high-fidelity-design/`
+- Required: `outputs/08-design-system/component-specs.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: shared component requirements, repeated patterns, and content structure that affect implementation planning
+
+- Required: `outputs/08-design-system/interaction-guidelines.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: interaction behavior and state rules that affect navigation, disclosure, form, and CTA behavior
+
+- Required: `outputs/08-design-system/accessibility-rules.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: accessibility requirements that must be baked into the implementation approach
+
+- Required: `outputs/09-high-fidelity-design/page-design-specs.md`
   - Source: previous workflow step `09-high-fidelity-design`
-  - Use: page-level design decisions, responsive behavior, and design deviations that the build architecture must accommodate
-  - At minimum, use `page-design-specs.md` and `responsive-notes.md`; use other step outputs when they affect implementation planning
+  - Use: page-level design decisions that the implementation plan must support
+
+- Required: `outputs/09-high-fidelity-design/responsive-notes.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: breakpoint behavior and responsive layout decisions that shape implementation structure
+
+- Optional: `outputs/09-high-fidelity-design/design-decisions.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: approved tradeoffs or exceptions that materially affect implementation planning

@@ -1,20 +1,73 @@
 # Inputs
 
-- Required: relevant page copy from `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`
+- Required: `outputs/03-content-direction/site-map.md`
+  - Source: previous workflow step `03-content-direction`
+  - Use: canonical page inventory and route list for determining which HTML pages must exist in the generated build
+
+- Required: `outputs/05-copywriting/home.md`
   - Source: previous workflow step `05-copywriting`
-  - Use: implementation-ready content for pages, metadata, and interface text
+  - Use: approved homepage copy
 
-- Required: relevant files from `/home/henry/Desktop/projects/web-designer/outputs/08-design-system/`
+- Required: `outputs/05-copywriting/services.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved services page copy
+
+- Required: `outputs/05-copywriting/projects.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved projects page copy
+
+- Required: `outputs/05-copywriting/process.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved process page copy
+
+- Required: `outputs/05-copywriting/about.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved about page copy
+
+- Required: `outputs/05-copywriting/contact.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved contact page copy
+
+- Required: `outputs/05-copywriting/seo-metadata.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved title tags, meta descriptions, and page metadata
+
+- Required: `outputs/05-copywriting/microcopy.md`
+  - Source: previous workflow step `05-copywriting`
+  - Use: approved labels, helper text, CTA labels, and other interface copy
+
+- Required: `outputs/08-design-system/design-tokens.md`
   - Source: previous workflow step `08-design-system`
-  - Use: approved token, component, interaction, and accessibility rules for implementation
-  - At minimum, use `design-tokens.md`, `component-specs.md`, `interaction-guidelines.md`, and `accessibility-rules.md`
+  - Use: approved token rules for implementing the visual system
 
-- Required: relevant files from `/home/henry/Desktop/projects/web-designer/outputs/09-high-fidelity-design/`
+- Required: `outputs/08-design-system/component-specs.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: approved repeated component structure and behavior
+
+- Required: `outputs/08-design-system/interaction-guidelines.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: approved interaction and state behavior
+
+- Required: `outputs/08-design-system/accessibility-rules.md`
+  - Source: previous workflow step `08-design-system`
+  - Use: approved accessibility rules that must be enforced in the build
+
+- Required: `outputs/09-high-fidelity-design/page-design-specs.md`
   - Source: previous workflow step `09-high-fidelity-design`
-  - Use: page-level design specifications and responsive decisions for build fidelity
-  - At minimum, use `page-design-specs.md` and `responsive-notes.md`
+  - Use: page-level design specifications for implementation fidelity
 
-- Required: relevant files from `/home/henry/Desktop/projects/web-designer/outputs/10-technical-architecture/`
+- Required: `outputs/09-high-fidelity-design/responsive-notes.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: responsive behavior that must be preserved in the build
+
+- Optional: `outputs/09-high-fidelity-design/design-decisions.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: approved design tradeoffs or exceptions that affect implementation
+
+- Required: `outputs/10-technical-architecture/implementation-plan.md`
   - Source: previous workflow step `10-technical-architecture`
-  - Use: implementation plan, component map, build order, and AI execution boundaries
-  - At minimum, use `technical-plan.md`, `component-map.md`, `implementation-sequence.md`, and `ai-execution-plan.md`
+  - Use: the consolidated implementation approach, build order, and AI task boundaries
+
+- Optional: `outputs/10-technical-architecture/open-questions.md`
+  - Source: previous workflow step `10-technical-architecture`
+  - Use: unresolved technical or external-input questions that still constrain implementation

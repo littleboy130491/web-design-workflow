@@ -6,15 +6,15 @@ Resolve the final UI design for key pages using real content, the approved desig
 
 ## Expected Input
 
-- Relevant page copy from `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`
-- `/home/henry/Desktop/projects/web-designer/outputs/07-information-architecture-and-wireframes/page-blueprints.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/08-design-system/design-tokens.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/08-design-system/component-specs.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/asset-sources.md` if previously approved external photos or icons are part of the design direction
+- Relevant page copy from `outputs/05-copywriting/`
+- `outputs/07-information-architecture-and-wireframes/page-blueprints.md`
+- `outputs/08-design-system/design-tokens.md`
+- `outputs/08-design-system/component-specs.md`
+- `outputs/06-visual-direction/asset-sources.md` if previously approved external photos or icons are part of the design direction
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/09-high-fidelity-design/`:
+Create the following files inside `outputs/09-high-fidelity-design/`:
 
 - `page-design-specs.md`: Final layout, component usage, visual hierarchy, and page-specific notes
 - `responsive-notes.md`: Mobile and desktop behavior, breakpoints, and adaptation rules

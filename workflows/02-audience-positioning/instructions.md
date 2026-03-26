@@ -6,12 +6,12 @@ Turn the strategic brief into concrete audience insight and a defensible market 
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/strategy-brief.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/assumptions-and-open-questions.md`
+- `outputs/01-strategy-foundation/strategy-brief.md`
+- `outputs/01-strategy-foundation/assumptions-and-open-questions.md`
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/`:
+Create the following files inside `outputs/02-audience-positioning/`:
 
 - `audiences.md`: Primary and secondary audience segments, intent, concerns, buying triggers, and objections
 - `positioning.md`: Positioning statement, differentiators, proof expectations, and competitive angle
@@ -29,7 +29,7 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 - Avoid fictional market claims
 - Do not confuse internal brand aspirations with audience priorities
 - Keep the positioning credible and supportable
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/`
+- Do not modify files outside `outputs/02-audience-positioning/`
 
 ## Execution Notes
 

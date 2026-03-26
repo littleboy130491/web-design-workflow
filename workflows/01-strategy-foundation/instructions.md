@@ -6,11 +6,11 @@ Define the strategic baseline for the company profile website so later content, 
 
 ## Expected Input
 
-- Source materials defined in `/home/henry/Desktop/projects/web-designer/workflows/01-strategy-foundation/inputs.md`
+- Source materials defined in `workflows/01-strategy-foundation/inputs.md`
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/`:
+Create the following files inside `outputs/01-strategy-foundation/`:
 
 - `strategy-brief.md`: Business goals, target outcomes, target audiences, market context, positioning ambition, and site scope
 - `assumptions-and-open-questions.md`: Explicit assumptions, unknowns, and any blockers that need resolution
@@ -28,7 +28,7 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 - Do not invent core company facts
 - Mark missing information explicitly
 - Keep the brief decision-oriented, not academic
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/`
+- Do not modify files outside `outputs/01-strategy-foundation/`
 
 ## Execution Notes
 

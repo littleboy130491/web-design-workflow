@@ -6,14 +6,14 @@ Define the site narrative, page structure, proof strategy, and content architect
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/strategy-brief.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/audiences.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/positioning.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/decision-drivers.md`
+- `outputs/01-strategy-foundation/strategy-brief.md`
+- `outputs/02-audience-positioning/audiences.md`
+- `outputs/02-audience-positioning/positioning.md`
+- `outputs/02-audience-positioning/decision-drivers.md`
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/`:
+Create the following files inside `outputs/03-content-direction/`:
 
 - `direction-a.md`: Content direction option A with narrative logic, page roles, and proof structure
 - `direction-b.md`: Content direction option B with a meaningfully different narrative angle
@@ -35,7 +35,7 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 - Do not create cosmetic alternatives that say the same thing three ways
 - Keep the page list lean and tied to business goals
 - Separate current facts from recommended future assets
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/`
+- Do not modify files outside `outputs/03-content-direction/`
 
 ## Execution Notes
 

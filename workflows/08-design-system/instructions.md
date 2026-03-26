@@ -6,16 +6,16 @@ Define the reusable visual and interaction system required to implement the webs
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/recommended-direction.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/visual-guidelines.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/visual-guidelines.html`
-- `/home/henry/Desktop/projects/web-designer/outputs/07-information-architecture-and-wireframes/page-blueprints.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/07-information-architecture-and-wireframes/wireframes.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/asset-sources.md` if visual-direction outputs rely on external sourced imagery or iconography
+- `outputs/06-visual-direction/recommended-direction.md`
+- `outputs/06-visual-direction/visual-guidelines.md`
+- `outputs/06-visual-direction/visual-guidelines.html`
+- `outputs/07-information-architecture-and-wireframes/page-blueprints.md`
+- `outputs/07-information-architecture-and-wireframes/wireframes.md`
+- `outputs/06-visual-direction/asset-sources.md` if visual-direction outputs rely on external sourced imagery or iconography
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/08-design-system/`:
+Create the following files inside `outputs/08-design-system/`:
 
 - `design-tokens.md`: Color, typography, spacing, radius, shadow, and other core tokens
 - `component-specs.md`: Reusable components, states, variants, icon usage, and content rules

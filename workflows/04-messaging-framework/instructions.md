@@ -6,14 +6,14 @@ Build the reusable messaging system that will govern headlines, proof claims, to
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/audiences.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/positioning.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/recommended-direction.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/asset-gap-list.md`
+- `outputs/02-audience-positioning/audiences.md`
+- `outputs/02-audience-positioning/positioning.md`
+- `outputs/03-content-direction/recommended-direction.md`
+- `outputs/03-content-direction/asset-gap-list.md`
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/`:
+Create the following files inside `outputs/04-messaging-framework/`:
 
 - `messaging-framework.md`: Brand promise, value pillars, proof strategy, CTA hierarchy, and tone guidance
 - `message-house.md`: Core message, support messages, proof points, and audience relevance
@@ -31,7 +31,7 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 - Avoid inflated brand language without evidence
 - Keep the messaging system practical and reusable
 - Do not allow the framework to drift into internal notes, editorial instructions, or page-structure commentary
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/`
+- Do not modify files outside `outputs/04-messaging-framework/`
 
 ## Execution Notes
 

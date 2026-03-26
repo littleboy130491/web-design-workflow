@@ -6,14 +6,14 @@ Develop multiple visual concepts for the website, make them reviewable in standa
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/01-strategy-foundation/strategy-brief.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/04-messaging-framework/messaging-framework.md`
-- Relevant page copy from `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`
+- `outputs/01-strategy-foundation/strategy-brief.md`
+- `outputs/04-messaging-framework/messaging-framework.md`
+- Relevant page copy from `outputs/05-copywriting/`
 - Any existing brand assets or brand constraints already present in the repository
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/`:
+Create the following files inside `outputs/06-visual-direction/`:
 
 - `concept-a.md`: Visual rationale, typography, color, imagery, iconography, motion, and layout principles for concept A
 - `concept-b.md`: Visual rationale, typography, color, imagery, iconography, motion, and layout principles for concept B

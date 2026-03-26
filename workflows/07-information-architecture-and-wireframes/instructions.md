@@ -6,15 +6,15 @@ Convert the approved content and visual direction into page blueprints, section 
 
 ## Expected Input
 
-- `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/site-map.md`
-- Relevant page copy from `/home/henry/Desktop/projects/web-designer/outputs/05-copywriting/`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/recommended-direction.md`
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/visual-guidelines.md` if additional approved structural guidance is needed
-- `/home/henry/Desktop/projects/web-designer/outputs/06-visual-direction/asset-sources.md` if the wireframes include approved sourced image references or icon references
+- `outputs/03-content-direction/site-map.md`
+- Relevant page copy from `outputs/05-copywriting/`
+- `outputs/06-visual-direction/recommended-direction.md`
+- `outputs/06-visual-direction/visual-guidelines.md` if additional approved structural guidance is needed
+- `outputs/06-visual-direction/asset-sources.md` if the wireframes include approved sourced image references or icon references
 
 ## Expected Outputs
 
-Create the following files inside `/home/henry/Desktop/projects/web-designer/outputs/07-information-architecture-and-wireframes/`:
+Create the following files inside `outputs/07-information-architecture-and-wireframes/`:
 
 - `page-blueprints.md`: Page-by-page section sequence, section goal, and conversion role
 - `wireframes.md`: Low-fidelity structural wireframes and responsive notes
@@ -38,7 +38,7 @@ Create the following files inside `/home/henry/Desktop/projects/web-designer/out
 - Prefer labeled placeholders unless a sourced photo or icon reference materially improves structural clarity
 - If new external photo or icon assets are introduced in this step, log them in `asset-sources.md`
 - Respect source licensing terms; if usage rights are unclear, stop and ask the user before continuing
-- Do not modify files outside `/home/henry/Desktop/projects/web-designer/outputs/07-information-architecture-and-wireframes/`
+- Do not modify files outside `outputs/07-information-architecture-and-wireframes/`
 
 ## Execution Notes
 

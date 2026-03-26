@@ -1,17 +1,17 @@
 # Inputs
 
-- Required: `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/audiences.md`
+- Required: `outputs/02-audience-positioning/audiences.md`
   - Source: previous workflow step `02-audience-positioning`
   - Use: audience concerns, priorities, and buying triggers that messaging must address
 
-- Required: `/home/henry/Desktop/projects/web-designer/outputs/02-audience-positioning/positioning.md`
+- Required: `outputs/02-audience-positioning/positioning.md`
   - Source: previous workflow step `02-audience-positioning`
   - Use: positioning statement, differentiators, and proof expectations
 
-- Required: `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/recommended-direction.md`
+- Required: `outputs/03-content-direction/recommended-direction.md`
   - Source: previous workflow step `03-content-direction`
   - Use: approved narrative direction, page roles, and content emphasis
 
-- Required: `/home/henry/Desktop/projects/web-designer/outputs/03-content-direction/asset-gap-list.md`
+- Required: `outputs/03-content-direction/asset-gap-list.md`
   - Source: previous workflow step `03-content-direction`
   - Use: identify evidence gaps and proof dependencies that messaging must handle carefully
