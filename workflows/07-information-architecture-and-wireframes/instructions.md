@@ -9,15 +9,15 @@ Convert the approved content and visual direction into page blueprints, section 
 - `outputs/03-content-direction/site-map.md`
 - Relevant page copy from `outputs/05-copywriting/`
 - `outputs/06-visual-direction/recommended-direction.md`
-- `outputs/06-visual-direction/visual-guidelines.md` if additional approved structural guidance is needed
+- `outputs/06-visual-direction/visual-guidelines.md`
 - `outputs/06-visual-direction/asset-sources.md` if the wireframes include approved sourced image references or icon references
 
 ## Expected Outputs
 
 Create the following files inside `outputs/07-information-architecture-and-wireframes/`:
 
-- `page-blueprints.md`: Page-by-page section sequence, section goal, and conversion role
-- `wireframes.md`: Low-fidelity structural wireframes and responsive notes
+- `page-blueprints.md`: Page-by-page section sequence, section goal, conversion role, and the dominant compositional move for each page
+- `wireframes.md`: Low-fidelity structural wireframes, composition notes, and responsive notes
 - `flow-notes.md`: Navigation logic, page transitions, and CTA path notes
 - `asset-sources.md` only if new external photo or icon assets are introduced during this step
 
@@ -26,6 +26,9 @@ Create the following files inside `outputs/07-information-architecture-and-wiref
 - Every core page has a clear structural plan
 - Information hierarchy supports scanning and conversion
 - Wireframes are sufficient to reduce layout ambiguity before detailed design
+- Wireframes identify which sections should be dominant, which should be supportive, and where layout rhythm should change instead of repeating the same block pattern
+- Home and Projects each establish a signature composition before any repeated support grid appears
+- The wireframes make clear where open layouts, split sections, full-width bands, framed panels, or other non-card structures are required
 - Any sourced photo or icon references used in this step are documented clearly enough for later review
 
 ## Constraints
@@ -34,6 +37,10 @@ Create the following files inside `outputs/07-information-architecture-and-wiref
 - Keep wireframes aligned with real content lengths
 - Keep wireframe labels and annotations structural, not narrative or editorial
 - Do not let image or icon selection dominate the purpose of the wireframe
+- Do not translate every section into equal-height cards, equal-width grids, or stacked panels by default
+- Do not let the page read like a sequence of interchangeable modules with only the labels changed
+- Use cards and grids only where the content is truly list-like, comparable, or repeatable
+- Keep one dominant section or compositional move per page so the page does not flatten into uniform support blocks
 - Agents are allowed to search Unsplash for stock photography and Heroicons for interface icons when specific references are needed to clarify structure or content intent
 - Prefer labeled placeholders unless a sourced photo or icon reference materially improves structural clarity
 - If new external photo or icon assets are introduced in this step, log them in `asset-sources.md`
@@ -44,6 +51,9 @@ Create the following files inside `outputs/07-information-architecture-and-wiref
 
 - Define where proof, CTAs, and contact triggers appear
 - Ensure the page structure supports both desktop and mobile use
+- Define the primary compositional move for each page before defining any repeated support modules
+- Note explicitly which sections are best represented as open text-and-media compositions and which sections are appropriate for cards, lists, or grids
+- Use wireframe annotations to record density changes, dominant media moments, and anti-repetition intent where they materially affect later design decisions
 - If text appears in the wireframes, it should be approved page copy or terse UI labeling, not commentary about the wireframe or page artifact
 - If sourced imagery or icons are shown, treat them as supporting references for structure and intent, not as final visual-design decisions
 
@@ -51,4 +61,5 @@ Create the following files inside `outputs/07-information-architecture-and-wiref
 
 - Stop and ask the user if required upstream content or visual-direction inputs are missing
 - Stop and ask the user if the only way to continue would be to turn the wireframes into high-fidelity page design
+- Stop and ask the user if the wireframes still collapse into mostly stacked cards, repeated grids, or uniform bands after the first structural pass
 - Stop and ask the user if suitable sourced image or icon references cannot be found within the approved sourcing rules

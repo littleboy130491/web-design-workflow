@@ -12,9 +12,9 @@
   - Source: previous workflow step `06-visual-direction`
   - Use: approved visual direction that should inform structural emphasis and layout tendencies
 
-- Optional: `outputs/06-visual-direction/visual-guidelines.md`
+- Required: `outputs/06-visual-direction/visual-guidelines.md`
   - Source: previous workflow step `06-visual-direction`
-  - Use: approved typography, spacing, layout, and component rules when wireframes need more explicit structural guidance
+  - Use: approved typography, spacing, composition, layout, and component rules that the wireframes must preserve
 
 - Optional: `outputs/06-visual-direction/asset-sources.md`
   - Source: previous workflow step `06-visual-direction`

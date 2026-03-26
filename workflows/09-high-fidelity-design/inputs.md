@@ -12,6 +12,10 @@
   - Source: previous workflow step `06-visual-direction`
   - Use: mood, typography, color, layout, and image-treatment rules that constrain the generated visuals
 
+- Required: `outputs/06-visual-direction/visual-guidelines.html`
+  - Source: previous workflow step `06-visual-direction`
+  - Use: inspectable specimen of the approved composition, layout, and component language that the generated visuals must honor
+
 - Required: `outputs/07-information-architecture-and-wireframes/page-blueprints.md`
   - Source: previous workflow step `07-information-architecture-and-wireframes`
   - Use: approved section order, page goals, and conversion structure
