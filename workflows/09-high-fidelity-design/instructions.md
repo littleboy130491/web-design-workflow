@@ -10,6 +10,7 @@ Resolve the final UI design for key pages by generating and approving AI-assiste
 - `outputs/06-visual-direction/recommended-direction.md`
 - `outputs/06-visual-direction/visual-guidelines.md`
 - `outputs/06-visual-direction/visual-guidelines.html`
+- `outputs/06-visual-direction/style-review.md`
 - `outputs/07-information-architecture-and-wireframes/page-blueprints.md`
 - `outputs/07-information-architecture-and-wireframes/wireframes.md`
 - `outputs/08-design-system/design-tokens.md`
@@ -44,6 +45,7 @@ Create the following files inside `outputs/09-high-fidelity-design/`:
 - Real content fits without breaking hierarchy
 - Responsive behavior is resolved at the spec level
 - Page-level design decisions remain consistent with the approved design system and earlier visual-direction rules
+- Page-level design decisions preserve the approved user feedback captured in `outputs/06-visual-direction/style-review.md`
 - Any newly introduced stock photos or icons are documented clearly enough for review and implementation
 - The approved comp set demonstrates a clear dominant composition above the fold rather than a stack of similarly weighted boxes
 - The approved comp set uses cards and panels only as supporting structures, not as the primary visual answer to every section
@@ -62,6 +64,7 @@ Create the following files inside `outputs/09-high-fidelity-design/`:
 - Do not rely on rounded corners, soft shadows, chips, or staggered spacing alone to signal a premium result
 - Do not treat a legible but template-like layout as acceptable high fidelity
 - Do not lock a comp if it can reasonably be described as a stack of information cards with images attached
+- Do not reintroduce style traits the user already pushed back on in `style-review.md` through generated imagery, denser layouts, larger headlines, louder surfaces, heavier shadows, softer corners, or more decorative icon treatment
 - Agents are allowed to search Unsplash for stock photography and Heroicons for interface icons when page-level design work requires it
 - If new external photo or icon assets are introduced in this step, log them in `asset-sources.md`
 - Respect source licensing terms; if usage rights are unclear, stop and ask the user before continuing
@@ -74,6 +77,7 @@ Create the following files inside `outputs/09-high-fidelity-design/`:
 - If the first pass feels generic, boxy, or overly modular, generate another exploration pass before approval even if the user did not explicitly request alternatives
 - Lock one approved direction before treating the step as complete
 - Treat the generated images as binding reference for composition, density, hierarchy, color balance, and image treatment, not as a pixel-perfect frontend spec
+- Review `style-review.md` before generating comps and convert the approved user feedback into an explicit design-bar checklist for `comp-review.md`
 - Review each comp for hero dominance, section rhythm, density contrast, whitespace, and overuse of similarly weighted boxes before approving it
 - Favor fewer, larger compositional moves over many small support cards when both can solve the same content problem
 - Use `comp-review.md` to record design-bar checks, rejected anti-patterns, and the exact reason an approved comp passes
@@ -92,5 +96,6 @@ Create the following files inside `outputs/09-high-fidelity-design/`:
 - Stop and ask the user to choose a concept before handing off to step `10-technical-architecture` or step `11-ai-first-development` when multiple alternatives exist and none has been explicitly approved
 - Stop and ask the user if generated visuals fail to meet the expected design bar and another round of exploration would materially change the direction
 - Stop and ask the user if two exploration passes still feel too generic, too boxy, or too template-like to approve honestly
+- Stop and ask the user if preserving approved style feedback from `style-review.md` would require a material change to the current direction or component system
 - Stop and ask the user before approval if `comp-review.md` still contains unresolved anti-pattern findings such as card-wall layouts, weak hero dominance, or repetitive equal-weight sections
 - Stop and ask the user if suitable imagery or icon assets cannot be found within the approved sourcing rules

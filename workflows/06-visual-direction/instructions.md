@@ -2,7 +2,7 @@
 
 ## Brief Description
 
-Develop multiple visual concepts for the website, make them reviewable in standalone HTML, and after user approval convert the chosen concept into a concrete visual-guidelines artifact expressed in Tailwind CSS and accessible in plain HTML.
+Develop multiple visual directions for the website, make them reviewable in standalone HTML, and isolate style decisions from page-copy review so the user can approve the visual language before later steps formalize it.
 
 ## Expected Input
 
@@ -18,10 +18,11 @@ Create the following files inside `outputs/06-visual-direction/`:
 - `concept-a.md`: Visual rationale, typography, color, imagery, iconography, motion, and layout principles for concept A
 - `concept-b.md`: Visual rationale, typography, color, imagery, iconography, motion, and layout principles for concept B
 - `concept-c.md`: Visual rationale, typography, color, imagery, iconography, motion, and layout principles for concept C
-- `concept-a.html`: Standalone HTML preview for concept A that can be opened directly in a browser
-- `concept-b.html`: Standalone HTML preview for concept B that can be opened directly in a browser
-- `concept-c.html`: Standalone HTML preview for concept C that can be opened directly in a browser
+- `concept-a.html`: Standalone HTML preview for concept A that can be opened directly in a browser and uses the same minimal specimen content as the other concepts
+- `concept-b.html`: Standalone HTML preview for concept B that can be opened directly in a browser and uses the same minimal specimen content as the other concepts
+- `concept-c.html`: Standalone HTML preview for concept C that can be opened directly in a browser and uses the same minimal specimen content as the other concepts
 - `comparison.md`: Comparison of the three concepts, their tradeoffs, composition differences, generic-risk assessment, and a recommendation
+- `style-review.md`: Structured review artifact that lists the visual variables the user should react to, including heading scale, spacing density, color balance, image prominence, border treatment, radius, shadow, and icon tone
 - `recommended-direction.md`: The approved visual direction, the reason it was selected, and implementation implications for later workflow steps
 - `visual-guidelines.md`: Concrete visual rules for typography, color pairing, spacing, composition, layout, components, imagery, iconography, and anti-patterns to avoid
 - `visual-guidelines.html`: Standalone accessible HTML specimen using Tailwind CDN that demonstrates the approved visual rules
@@ -29,9 +30,12 @@ Create the following files inside `outputs/06-visual-direction/`:
 
 ## Success Criteria
 
-- At least 3 distinct visual directions are presented, with meaningful differences in typography, color use, layout attitude, component tone, and composition framework
+- At least 3 distinct visual directions are presented, with meaningful differences in composition, type attitude, color balance, spacing rhythm, and image treatment
+- All concept previews use the same or equivalent minimal specimen content so the comparison stays focused on style instead of copy
 - Each direction is visually reviewable without requiring a design tool
 - `comparison.md` makes the tradeoffs and recommendation clear enough for a user approval decision and explicitly notes where a concept risks looking generic, template-like, or overly modular
+- `style-review.md` gives the user clear style levers to react to, including what feels too tight, too large, too decorative, too flat, too dark, or too generic
+- The concept previews are specific enough to guide later design work without drifting into page-level copywriting or implementation detail
 - After approval, `visual-guidelines.md` explicitly defines heading, subheading, body, description, button, and label typography rules
 - After approval, `visual-guidelines.md` explicitly defines color pairings, spacing scale, composition rules, layout principles, component guidance, and anti-patterns
 - `visual-guidelines.html` opens directly in a browser, uses Tailwind via CDN, and visibly demonstrates typography hierarchy, color pairings, spacing, layout patterns, signature composition patterns, and core UI components
@@ -52,6 +56,8 @@ Create the following files inside `outputs/06-visual-direction/`:
 - Avoid generic default web aesthetics
 - Do not use generic default font stacks in the previews unless an existing brand system explicitly requires them
 - Do not add editor-facing commentary or instructional sentences into the visible text of the previews
+- Do not let the previews become content-review artifacts, page-strategy artifacts, or copy experiments
+- Do not invent persuasive copy, fake contact details, or UI labels that are not grounded in approved copy or neutral specimen text
 - Do not equate premium with rounded boxes, shadows, pill tags, or staggered cards alone
 - Do not let every section resolve to equal-weight cards, equal-width grids, or interchangeable panels
 - Do not approve a direction that could be mistaken for a generic SaaS, dashboard, or agency template after the copy is swapped
@@ -64,10 +70,13 @@ Create the following files inside `outputs/06-visual-direction/`:
 
 - The HTML previews should be simple review artifacts, not production code
 - Each concept preview should show enough of a page to judge hierarchy, type, color, imagery treatment, icon tone, and overall atmosphere
-- Any visible copy in the previews should be short, user-facing, and aligned to the approved site copy rather than explanatory notes about the preview itself
+- Use minimal, neutral, reusable specimen content across all concepts so the visual comparison stays fair
+- Any visible copy in the previews should be short, user-facing, and aligned to approved copy or neutral specimen text rather than explanatory notes about the preview itself
 - Treat composition, scale contrast, whitespace, and section rhythm as first-class decisions before component styling
 - Give each concept a primary compositional device such as a feature canvas, gallery rail, editorial split, proof band, or framed content block, and describe how supporting sections avoid becoming repetitive card walls
 - If cards appear in a concept, use them as support for list-like content rather than as the universal container for every section
+- The previews should help the user react to style choices such as heading size, spacing density, image dominance, border sharpness, radius softness, shadow weight, and color balance
+- `style-review.md` should include a structured prompt set for typography, spacing and density, layout and composition, imagery and crop style, icon usage, border or radius or shadow treatment, and color and contrast
 - `visual-guidelines.md` should include a typography section, color section, spacing section, composition section, layout section, component section, imagery direction section, iconography section, and an anti-patterns section
 - The composition section should define dominant block hierarchy, density changes between sections, acceptable grid usage, and how many similarly weighted boxes may appear before the layout is considered too repetitive
 - `visual-guidelines.html` should include visible examples for headings, body text, descriptions, buttons, cards, navigation, form controls, section spacing, layout containers, and at least one signature non-card-led composition pattern
@@ -75,9 +84,10 @@ Create the following files inside `outputs/06-visual-direction/`:
 
 ## Stop Conditions Or Approval Gates
 
-- Stop after creating `concept-a.*`, `concept-b.*`, `concept-c.*`, `comparison.md`, and any supporting entries already needed in `asset-sources.md`
+- Stop after creating `concept-a.*`, `concept-b.*`, `concept-c.*`, `comparison.md`, `style-review.md`, and any supporting entries already needed in `asset-sources.md`
 - Ask the user to approve one concept before creating `recommended-direction.md`, `visual-guidelines.md`, and `visual-guidelines.html`
 - Stop and ask the user if required upstream content is missing and cannot be derived from repository materials
 - Stop and ask the user if all viable concepts still feel too generic, too boxy, or too template-like after the first exploration pass
+- Stop and ask the user if the previews cannot be compared fairly because content differences are affecting the judgment
 - Stop and ask the user before approving a direction if the only differentiators are palette, typography, or card styling rather than composition
 - Stop and ask the user if the project requires stricter asset licensing rules than can be confirmed from the chosen sources
