@@ -56,6 +56,18 @@
   - Source: previous workflow step `09-high-fidelity-design`
   - Use: page-level design specifications for implementation fidelity
 
+- Required: `outputs/09-high-fidelity-design/approved-direction.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: the approved visual direction that must be preserved in the HTML implementation
+
+- Required: `outputs/09-high-fidelity-design/implementation-mapping.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: the approved translation of image-based visual decisions into implementation rules
+
+- Required: `outputs/09-high-fidelity-design/visual-comps/`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: approved AI-generated visual reference images that the HTML build must follow
+
 - Required: `outputs/09-high-fidelity-design/responsive-notes.md`
   - Source: previous workflow step `09-high-fidelity-design`
   - Use: responsive behavior that must be preserved in the build

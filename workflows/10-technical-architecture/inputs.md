@@ -24,6 +24,18 @@
   - Source: previous workflow step `09-high-fidelity-design`
   - Use: page-level design decisions that the implementation plan must support
 
+- Required: `outputs/09-high-fidelity-design/approved-direction.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: the approved visual concept that the implementation must preserve at a structural and stylistic level
+
+- Required: `outputs/09-high-fidelity-design/implementation-mapping.md`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: the translation layer from approved image references into concrete implementation rules
+
+- Required: `outputs/09-high-fidelity-design/visual-comps/`
+  - Source: previous workflow step `09-high-fidelity-design`
+  - Use: approved AI-generated reference images that the technical plan must account for during implementation
+
 - Required: `outputs/09-high-fidelity-design/responsive-notes.md`
   - Source: previous workflow step `09-high-fidelity-design`
   - Use: breakpoint behavior and responsive layout decisions that shape implementation structure

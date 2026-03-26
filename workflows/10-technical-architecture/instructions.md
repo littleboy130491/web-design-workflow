@@ -2,7 +2,7 @@
 
 ## Brief Description
 
-Define the leanest implementation plan that lets an AI agent build the approved site without unnecessary framework or documentation overhead.
+Define the leanest implementation plan that lets an AI agent build the approved site from the approved high-fidelity visual references without unnecessary framework or documentation overhead.
 
 ## Expected Input
 
@@ -12,6 +12,9 @@ Define the leanest implementation plan that lets an AI agent build the approved 
 - `outputs/08-design-system/interaction-guidelines.md`
 - `outputs/08-design-system/accessibility-rules.md`
 - `outputs/09-high-fidelity-design/page-design-specs.md`
+- `outputs/09-high-fidelity-design/approved-direction.md`
+- `outputs/09-high-fidelity-design/implementation-mapping.md`
+- `outputs/09-high-fidelity-design/visual-comps/`
 - `outputs/09-high-fidelity-design/responsive-notes.md`
 - `outputs/09-high-fidelity-design/design-decisions.md` if present and relevant
 
@@ -26,6 +29,7 @@ Create the following files inside `outputs/10-technical-architecture/`:
 
 - The implementation plan is concrete enough to execute without additional architecture documents
 - The plan reflects the approved site scope, page structure, responsiveness, and accessibility requirements
+- The plan explains how the approved visual references will be translated into HTML structure, Tailwind usage, spacing, and asset handling
 - The stack and file structure are simple enough for a static HTML implementation to proceed directly
 - AI usage is structured around bounded, reviewable execution tasks
 
@@ -41,6 +45,9 @@ Create the following files inside `outputs/10-technical-architecture/`:
 
 - Default to plain static HTML as the implementation target for this workflow
 - Treat Tailwind CDN as acceptable when it matches the approved execution approach
+- Treat the approved image references from `outputs/09-high-fidelity-design/visual-comps/` as implementation inputs, not optional inspiration
+- Use `approved-direction.md` and `implementation-mapping.md` to separate what is visually binding from what can adapt during responsive implementation
+- Plan from the user-approved concept only when step `09-high-fidelity-design` contains multiple alternatives
 - Capture build order, repeated component patterns, and review gates as sections inside `implementation-plan.md` rather than separate files
 - Use `open-questions.md` only when unresolved inputs or deployment constraints would otherwise force guessing
 
@@ -48,5 +55,6 @@ Create the following files inside `outputs/10-technical-architecture/`:
 
 - Stop and ask the user if required design-system or high-fidelity-design inputs are missing
 - Stop and ask the user if deployment constraints, stack constraints, or hosting assumptions are unclear and materially affect the architecture
+- Stop and ask the user if the approved visual references imply implementation constraints or patterns that conflict with the current stack decision
 - Stop and ask the user if the simplest viable implementation approach is unclear because the approved artifacts imply conflicting technical directions
 - Stop and ask the user if the proposed implementation would require a major deviation from approved design or content outputs

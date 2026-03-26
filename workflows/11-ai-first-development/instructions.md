@@ -20,6 +20,9 @@ Implement the website using an AI-first workflow that still keeps code quality, 
 - `outputs/08-design-system/interaction-guidelines.md`
 - `outputs/08-design-system/accessibility-rules.md`
 - `outputs/09-high-fidelity-design/page-design-specs.md`
+- `outputs/09-high-fidelity-design/approved-direction.md`
+- `outputs/09-high-fidelity-design/implementation-mapping.md`
+- `outputs/09-high-fidelity-design/visual-comps/`
 - `outputs/09-high-fidelity-design/responsive-notes.md`
 - `outputs/09-high-fidelity-design/design-decisions.md` if present and relevant
 - `outputs/10-technical-architecture/implementation-plan.md`
@@ -70,6 +73,8 @@ Create the following files inside `outputs/11-ai-first-development/`:
 
 - Use AI for bounded tasks such as component scaffolding, refactors, repetitive patterns, and issue triage
 - Treat `site-map.md` as the source of truth for required routes and page coverage
+- Treat the approved visual references from step `09-high-fidelity-design` as binding implementation guidance for layout, hierarchy, density, and image treatment
+- If step `09-high-fidelity-design` contains multiple concept folders, implement only the concept selected in `approved-direction.md` unless the user explicitly asks for an HTML alternative build
 - Prefer editing the actual files in `site-build/` directly when the approved stack is plain HTML
 - Use Tailwind CDN utility classes directly in the HTML when that is the approved execution approach
 - Create `site-build/assets/` only when the implementation actually ships local images, icons, JavaScript, or other assets
