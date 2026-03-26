@@ -28,6 +28,7 @@ Follow this sequence for every workflow-execution request:
 Do not ask the user to manually figure out workflow dependencies if the workflow files already define them. The agent should trace dependencies on its own.
 Do not assume permission to run the rest of the workflow after completing one step. Default to explicit confirmation between steps unless the user clearly asks for end-to-end execution.
 When executing a workflow, only create or modify files inside `outputs/` unless the user explicitly asks for changes elsewhere.
+Treat file and folder references in workflow documents as repository-relative paths unless the workflow explicitly says otherwise.
 
 ## Missing Input Resolution Rules
 
@@ -36,6 +37,7 @@ When checking whether a workflow step can be executed:
 - Read `inputs.md` first to identify every required input.
 - If `inputs.md` references a previous step's `outputs/NN-name/` folder or a file within it, treat that as a dependency that must be satisfied before continuing.
 - Read the referenced prior step's `instructions.md` and inspect the matching `outputs/NN-name/` folder to understand what should exist.
+- When following file references from workflow documents, use the relative path exactly as written rather than converting it to an absolute path in the workflow definition.
 - If the prior step output does not exist yet, execute that prior step first.
 - Keep moving backward until you find a step whose inputs are available or until you reach an input that only the user can provide.
 - When asking the user for a missing external input, be specific about the format or content needed.
@@ -53,6 +55,7 @@ When executing a workflow step:
 - Write the actual deliverables for the step into that output folder, including Markdown outputs when applicable.
 - Use the contents of `outputs/NN-name/` to verify that the produced result matches the expectations documented in `instructions.md`.
 - If the step depends on outputs from another step, reference those upstream outputs explicitly while working.
+- When referring to workflow files, inputs, or outputs during execution, use repository-relative paths in messages and artifacts.
 - Do not mark a step complete if its documented outputs are incomplete or inconsistent with its success criteria.
 - After the step is complete, ask the user whether to proceed to the next step instead of automatically continuing.
 - Do not modify workflow definition files during execution unless the user explicitly asks for a workflow revision.

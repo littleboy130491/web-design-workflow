@@ -90,10 +90,12 @@ For each input:
 
 - State whether it is required or optional
 - State where it comes from
-- Use exact paths when the input is a file or folder
+- Use exact relative paths from the repository root when the input is a file or folder
 - Say whether the executor can derive it from previous workflow outputs or must ask the user for it
 
 If the input comes from a previous workflow step, state that explicitly using the prior step's output folder or specific output file path.
+
+When referring to any file or folder in workflow definitions, use repository-relative paths such as `outputs/01-brief/summary.md` rather than absolute filesystem paths.
 
 Example:
 
@@ -128,6 +130,7 @@ At minimum, include:
 `instructions.md` is the place for the step contract. It should define the expected outputs for the step and where they should be created inside `outputs/NN-name/`.
 
 When possible, make outputs machine-checkable by naming exact files, formats, and required contents.
+When referring to files or folders in the instructions, use repository-relative paths consistently.
 
 Example expectations:
 
@@ -186,6 +189,7 @@ Use these guardrails while designing the workflow:
 - Do not use subjective instructions like "make it good", "polish if needed", or "use judgment" without concrete success criteria.
 - Do not combine multiple major deliverables into one step if they have different inputs, outputs, or approval points.
 - Do state exact output paths whenever possible.
+- Do use repository-relative paths when referring to files or folders.
 - Do state whether a missing input should trigger backward dependency resolution or a user question.
 - Do state whether the step is allowed to modify anything outside its own `outputs/NN-name/` folder. Default expectation: no.
 - Do add explicit approval gates when a step should pause before a consequential action, irreversible action, or external side effect.
